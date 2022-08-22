@@ -1,116 +1,162 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Manipulating the DOM</title>
-    <!-- Load Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Load Styles -->
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Landing Page</title>
+    <!-- TO DO: link google fonts
+                link favicon  
+                load styles-->
   </head>
   <body>
-    <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-    <header class="page__header">
-      <nav class="navbar__menu">
-        <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul id="navbar__list"></ul>
+    <header id="page-header">
+      <nav class="navbar">
+        <ul id="navbar-contents"></ul>
       </nav>
     </header>
     <main>
-      <header class="main__hero">
-        <h1>Landing Page</h1>
+      <header id="opening-section">
+        <div id="hero-container">
+          <h1>The Code Hub</h1>
+        </div>
+        <p>
+          This landing page is for my final project for the Udacity FrontEnd Web
+          Development program It's an expanded version of a
+          <a href="html/original-code-hub.html">webpage</a> that I designed a
+          few months ago for the purpose of condensing all of my favorite coding
+          links and resources into one compact reference sheet. Thank you for
+          viewing andI hope you like it!
+        </p>
       </header>
-      <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-      <section id="section1" data-nav="Section 1" class="your-active-class">
-        <div class="landing__container">
-          <h2>Section 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+      <section id="section1" data-nav="Section 1" class>
+        <h2>Resources</h2>
+        <div id="resource-link-section">
+          <a href="https://github.com/" target="blank" class="resource-links"
+            >Git Hub</a
+          >
+          <a
+            href="https://codepen.io/your-work"
+            target="blank"
+            class="resource-links"
+            >Code Pen</a
+          >
+          <a
+            href="https://jsbin.com/?html,js,output"
+            target="blank"
+            class="resource-links"
+            >JS Bin</a
+          >
         </div>
       </section>
-      <section id="section2" data-nav="Section 2">
-        <div class="landing__container">
-          <h2>Section 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+      <section id="section2" data-nav="Section 2" class>
+        <h2>Continued Education</h2>
+        <div id="education-link-group-1">
+          <!-- TO DO: Add icons for the three courses -->
+          <div class="course-icon"></div>
+          <div class="course-title">
+            <a
+              href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
+              target="_blank"
+              >FrontEnd Web Developer Nanodegree Program</a
+            >
+          </div>
+          <div class="course-icon"></div>
+          <div class="course-title">
+            <a
+              href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+              target="_blank"
+              >Web Developer Bootcamp 2022</a
+            >
+          </div>
+          <div class="course-icon"></div>
+          <div class="course-title">
+            <a
+              href="https://www.coursera.org/specializations/web-design"
+              target="_blank"
+              >University of Michigan's Web Design for Everybody</a
+            >
+          </div>
+        </div>
+        <div id="education-link-group-2">
+          <a
+            href="https://www.w3schools.com/"
+            target="blank"
+            class="education-link-icons"
+            >W<sup>3</sup> Schools</a
+          >
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn"
+            target="blank"
+            class="education-link-icons"
+            >Mozilla Developer Network</a
+          >
+          <a
+            href="https://www.freecodecamp.org/learn"
+            target="blank"
+            class="education-link-icons"
+            >Free Code Camp</a
+          >
         </div>
       </section>
-      <section id="section3" data-nav="Section 3">
-        <div class="landing__container">
-          <h2>Section 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
-            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
-            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
-            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
-            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
-            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
-            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
-            vitae elit. Integer nec libero venenatis libero ultricies molestie
-            semper in tellus. Sed congue et odio sed euismod.
-          </p>
-
-          <p>
-            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
-            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
-            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
-            elementum tortor mollis non.
-          </p>
+      <section id="section3" data-nav="Section 3" class>
+        <h2>Design Tools</h2>
+        <div class="design-container">
+          <div class="design-button-small">
+            <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+          </div>
+          <div class="design-button-small">
+            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+          </div>
+        </div>
+        <div class="design-container">
+          <div class="design-button-large">
+            <a href="https://www.freepik.com/" target="_blank">FreePik</a>
+          </div>
+        </div>
+        <div class="design-container">
+          <div class="design-button-small">
+            <a href="https://coolors.co/palettes/trending" target="_blank"
+              >Coolers</a
+            >
+          </div>
+          <div class="design-button-small">
+            <a
+              href="https://imagecolorpicker.com/color-code/721a85"
+              target="_blank"
+              >Color Picker</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="section4" data-nav="Section 4" class>
+        <h2>Other Projects by Ari</h2>
+        <div id="project-card-container">
+          <div class="project-card">
+            <a
+              href="https://github.com/AriannaCF/TheWitcher3-MonsterTradingCards"
+              target="_blank"
+              >The Witcher 3 Monster Trading Cards</a
+            >
+          </div>
+          <div class="project-card">
+            <a
+              href="https://ariannacf.github.io/Aspirational-Ari/"
+              target="_blank"
+              >Personal Blog Project</a
+            >
+          </div>
+          <div class="project-card">
+            <a
+              href="https://github.com/AriannaCF/pixelArtProject-repo"
+              target="_blank"
+              >Pixel Art Maker</a
+            >
+          </div>
         </div>
       </section>
     </main>
-    <footer class="page__footer">
-      <p>&copy Udacity</p>
-    </footer>
+    <!-- TO DO: add footer section -->
+    <footer></footer>
   </body>
 </html>

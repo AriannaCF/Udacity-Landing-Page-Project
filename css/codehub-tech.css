@@ -1,0 +1,335 @@
+/* font-family: 'Orbitron', sans-serif;
+font-family: 'Space Mono', monospace; */
+
+/* -----------------META----------------- */
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: #00fff9;
+  font-family: "Space Mono", monospace;
+}
+
+/* -----------------HEADINGS----------------- */
+h1 {
+  font-family: "Orbitron", sans-serif;
+}
+h2 {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  margin: 0;
+  font-size: 17.6px;
+  color: #aaaaaa;
+}
+h3 {
+  margin: 0 0 10px 0;
+  color: #fffff8;
+}
+h1,
+h3 {
+  text-shadow: 0 0 4px white;
+}
+/* -----------------LAYOUT----------------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 10vh 40vh 19vh 19vh 8.5vh;
+  grid-template-areas:
+    "head menu menu menu"
+    "main main main main"
+    "htm htm cool icon"
+    "pick pick cool icon"
+    "foot foot foot foot";
+  gap: 5px;
+  margin: -4px;
+}
+.colors {
+  grid-area: icon;
+}
+.skills {
+  grid-area: htm;
+}
+.fonts {
+  grid-area: pick;
+}
+.images {
+  grid-area: cool;
+}
+.foot {
+  grid-area: foot;
+}
+
+/* -----------------LINKS/NAV----------------- */
+
+a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: white;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+}
+.prime-nav {
+  display: flex;
+  justify-content: space-around;
+}
+.prime-nav a {
+  padding: 10px;
+  margin: 0 10px;
+  background: linear-gradient(#e95931, #ed7351, #e95931);
+  font-family: "Orbitron", sans-serif;
+  border: 1px solid #ce3d16;
+  border-radius: 4px;
+  flex-basis: 250px;
+  flex-shrink: 1;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease;
+}
+.prime-nav a:hover {
+  box-shadow: 0 3px 5px #78240d;
+  transform: translate(0, -3px);
+  text-shadow: 0 0 4px white;
+}
+.menu {
+  grid-area: menu;
+  background-color: #e84b20;
+}
+/* -----------------HEADER----------------- */
+
+.head {
+  grid-area: head;
+  background-color: #db2e34;
+  color: #ffffff;
+  text-shadow: 0 0 5px white;
+  padding-left: 20px;
+}
+
+/* -----------------MAIN, CARDS----------------- */
+.main {
+  grid-area: main;
+  background-image: url(../images/wallpaperbetter.com_2560x1440.jpg);
+  background-size: cover;
+  background-position: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  flex-shrink: 1;
+  flex-basis: 250px;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  height: 260px;
+  padding: 10px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, text-shadow 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 10px 0 #000000aa;
+  transform: translate(0, -4px);
+  text-shadow: 0 0 4px;
+  color: white;
+}
+.card:hover h2 {
+  color: inherit;
+}
+.card li {
+  list-style-type: square;
+  padding: 5px 0;
+}
+.card li a {
+  color: #aaaaaa;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.card li a:hover {
+  color: white;
+  text-shadow: 0 0 4px white;
+}
+.card ul {
+  padding: 0 0 0 20px;
+}
+
+/* -----------UNIVERSAL BUTTON RULES----------- */
+.button-container {
+  display: flex;
+  margin: 10px;
+}
+.button {
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, text-shadow 0.2s ease;
+  font-family: "Orbitron", sans-serif;
+  align-items: center;
+}
+.button:hover {
+  transform: translate(0, -3px);
+  text-shadow: 0 0 4px white;
+}
+
+/* -----------------SKILLS----------------- */
+
+.skills {
+  background-color: #9b992a;
+}
+.skills .button {
+  font-size: 30px;
+  padding: 35px 0;
+  border: 1px solid #7b7922;
+  border-radius: 4px;
+  height: 120px;
+  background: linear-gradient(#aeab30, #cfcd51, #aeab30);
+}
+.skills .button:hover {
+  box-shadow: 0 3px 5px #4e4d15;
+}
+/* -----------------COLORS----------------- */
+.colors .button-container {
+  background-color: #0e5499;
+  flex-direction: column;
+  margin: 0;
+  height: 317px;
+}
+.colors .button {
+  flex-basis: 120px;
+  border: 1px solid #093663;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 40px;
+  margin: 15px 20px;
+  background: linear-gradient(#1060b0, #1579dd, #1060b0);
+}
+/* .colors .button:last-of-type {
+  margin: 20px;
+} */
+.colors .button:hover {
+  box-shadow: 0 3px 5px #083058;
+}
+
+/* -----------------IMAGES----------------- */
+.images {
+  background-color: #00807f;
+}
+.images .button-container {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.images .button {
+  background: linear-gradient(#009b9b, #00b6b6, #009b9b);
+  border: 1px solid #004949;
+  border-radius: 4px;
+  padding: 16px 0;
+  flex-direction: column;
+  flex: basis 100px;
+  height: 55px;
+}
+.images .button:hover {
+  box-shadow: 0 3px 5px #005252;
+}
+
+/* -----------------FONTS----------------- */
+.fonts {
+  background-color: #ba0a52;
+}
+.fonts .button {
+  font-size: 30px;
+  padding: 35px 0;
+  border: 1px solid #760635;
+  border-radius: 4px;
+  height: 120px;
+  background: linear-gradient(#ce0b5c, #f4287d, #ce0b5c);
+}
+.fonts .button:hover {
+  box-shadow: 0 3px 5px #4f0423;
+}
+
+/* -----------------...----------------- */
+.foot {
+  background-color: #7f1f66;
+}
+.footer-flex-container {
+  display: flex;
+}
+
+.foot a {
+  font-family: "Orbitron", sans-serif;
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  justify-content: space-around;
+  text-align: center;
+  padding: 5px 0;
+  background: linear-gradient(#942476, #bc2e96, #942476);
+  border: 1px solid #521441;
+  border-radius: 4px;
+  margin: 0 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+.foot a:hover {
+  box-shadow: 0 3px 5px #49123a;
+  transform: translate(0, -4px);
+  text-shadow: 0 0 4px white;
+}
+
+/* @media (max-width: 800px) {
+  .container {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 100px auto auto auto 100px;
+    grid-template-areas:
+      "head head"
+      "menu menu"
+      "main main"
+      "icon cool"
+      "pick code"
+      "foot foot";
+  }
+  .prime-nav a {
+    flex-basis: 175px;
+    margin: 10px;
+  }
+  .main {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex-basis: 200px;
+    margin: 10px 25px;
+  }
+  .imag {
+    display: none;
+  }
+  .code {
+    grid-area: code;
+    background-color: #3b1d4a;
+    margin: 0;
+    padding: 22px;
+  }
+  .code li {
+    padding: 0;
+  }
+  .code a {
+    font-size: 24px;
+  }
+  .code,
+  .imag,
+  .icon,
+  .pick {
+    height: 175px;
+  }
+  .pick {
+    justify-content: flex-start;
+  }
+} */
