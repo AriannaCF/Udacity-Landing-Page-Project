@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- TO DO: link google fonts
                 link favicon  
                 load styles-->
   </head>
   <body>
     <header id="page-header">
-      <nav class="navbar">
-        <ul id="navbar-contents"></ul>
+      <nav id="primary-navigation">
+        <ul id="navbar"></ul>
       </nav>
     </header>
     <main>
@@ -20,7 +21,7 @@
         <div id="hero-container">
           <h1>The Code Hub</h1>
         </div>
-        <p>
+        <p id="explainer">
           This landing page is for my final project for the Udacity FrontEnd Web
           Development program It's an expanded version of a
           <a href="html/original-code-hub.html">webpage</a> that I designed a
@@ -29,110 +30,307 @@
           viewing andI hope you like it!
         </p>
       </header>
-      <section id="section1" data-nav="Section 1" class>
-        <h2>Resources</h2>
+
+      <section
+        id="section1"
+        data-nav="Resources"
+        data-section="section1"
+        class="division"
+      >
+        <h2 id="resource-heading">Resources</h2>
+        <p class="section-description">
+          These are some of the most commonly used resources that I utilize on a
+          daily basis. Github is where I store repositories for my completed
+          projects as well as where I host my personal blog. Codepen is where I
+          store some of the smaller projects I complete as practice while
+          learning to code. Finally JS Bin is my favorite place to practice
+          Javascript as I learn.
+        </p>
         <div id="resource-link-section">
-          <a href="https://github.com/" target="blank" class="resource-links"
-            >Git Hub</a
-          >
-          <a
-            href="https://codepen.io/your-work"
-            target="blank"
-            class="resource-links"
-            >Code Pen</a
-          >
-          <a
-            href="https://jsbin.com/?html,js,output"
-            target="blank"
-            class="resource-links"
-            >JS Bin</a
-          >
+          <div class="resource-container">
+            <img
+              src="images/github-logo.png"
+              alt="GitHub logo"
+              class="resource-logo"
+            />
+            <a
+              href="https://github.com/"
+              target="blank"
+              class="resource-links"
+              id="github"
+              >Git Hub</a
+            >
+          </div>
+          <div class="resource-container">
+            <img
+              src="images/jsbin-logo.png"
+              alt="JS Bin logo"
+              class="resource-logo"
+            />
+            <a
+              href="https://jsbin.com/?html,js,output"
+              target="blank"
+              class="resource-links"
+              id="jsbin"
+              >JS Bin</a
+            >
+          </div>
+
+          <div class="resource-container">
+            <img
+              src="images/codepen-logo.jpeg"
+              alt="Codepen-logo"
+              class="resource-logo"
+            />
+            <a
+              href="https://codepen.io/your-work"
+              target="blank"
+              class="resource-links"
+              id="codepen"
+              >Code Pen</a
+            >
+          </div>
         </div>
       </section>
-      <section id="section2" data-nav="Section 2" class>
-        <h2>Continued Education</h2>
+
+      <section
+        id="section2"
+        data-nav="Education"
+        data-section="section2"
+        class="division"
+      >
+        <h2>Educational Resources</h2>
         <div id="education-link-group-1">
           <!-- TO DO: Add icons for the three courses -->
-          <div class="course-icon"></div>
-          <div class="course-title">
-            <a
-              href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
-              target="_blank"
-              >FrontEnd Web Developer Nanodegree Program</a
-            >
+          <div class="course-container">
+            <div class="course-icon">
+              <img
+                src="images/udacity-icon.png"
+                alt="Udacity Icon"
+                class="course-icon-center"
+              />
+            </div>
+            <div class="course-title">
+              <a
+                href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
+                target="_blank"
+                >FrontEnd Web Developer Nanodegree Program</a
+              >
+            </div>
           </div>
-          <div class="course-icon"></div>
-          <div class="course-title">
-            <a
-              href="https://www.udemy.com/course/the-web-developer-bootcamp/"
-              target="_blank"
-              >Web Developer Bootcamp 2022</a
-            >
+          <div class="course-container">
+            <div class="course-icon">
+              <img
+                src="images/udemy-icon.png"
+                alt="Udemy Icon"
+                class="course-icon-center"
+              />
+            </div>
+            <div class="course-title">
+              <a
+                href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                target="_blank"
+                >Web Developer Bootcamp 2022</a
+              >
+            </div>
           </div>
-          <div class="course-icon"></div>
-          <div class="course-title">
-            <a
-              href="https://www.coursera.org/specializations/web-design"
-              target="_blank"
-              >University of Michigan's Web Design for Everybody</a
-            >
+          <div class="course-container">
+            <div class="course-icon">
+              <img
+                src="images/coursera-icon.png"
+                alt="Coursera Icon"
+                class="course-icon-center"
+              />
+            </div>
+            <div class="course-title">
+              <a
+                href="https://www.coursera.org/specializations/web-design"
+                target="_blank"
+                >University of Michigan's Web Design for Everybody</a
+              >
+            </div>
           </div>
-        </div>
-        <div id="education-link-group-2">
-          <a
-            href="https://www.w3schools.com/"
-            target="blank"
-            class="education-link-icons"
-            >W<sup>3</sup> Schools</a
-          >
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Learn"
-            target="blank"
-            class="education-link-icons"
-            >Mozilla Developer Network</a
-          >
-          <a
-            href="https://www.freecodecamp.org/learn"
-            target="blank"
-            class="education-link-icons"
-            >Free Code Camp</a
-          >
+          <div id="education-link-group-2">
+            <div class="course-container">
+              <div class="course-icon">
+                <img
+                  src="images/w3schools-icon.png"
+                  alt="W3Schools Icon"
+                  class="course-icon-center"
+                />
+              </div>
+              <div class="course-title">
+                <a href="https://www.w3schools.com/" target="_blank"
+                  >W<sup>3</sup> Schools</a
+                >
+              </div>
+            </div>
+            <div class="course-container">
+              <div class="course-icon">
+                <img
+                  src="images/mdn-icon.png"
+                  alt="MDN Icon"
+                  class="course-icon-center"
+                />
+              </div>
+              <div class="course-title">
+                <a href="https://developer.mozilla.org/en-US/" target="_blank"
+                  >Mozilla Developer Network</a
+                >
+              </div>
+            </div>
+            <div class="course-container">
+              <div class="course-icon">
+                <img
+                  src="images/freeCodeCamp-icon.png"
+                  alt="FreeCodeCamp Icon"
+                  class="course-icon-center"
+                />
+              </div>
+              <div class="course-title">
+                <a href="https://www.freecodecamp.org/learn" target="_blank"
+                  >freeCodeCamp</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="section3" data-nav="Section 3" class>
+
+      <section
+        id="section3"
+        data-nav="Design"
+        data-section="section3"
+        class="division"
+      >
         <h2>Design Tools</h2>
         <div class="design-container">
-          <div class="design-button-small">
-            <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
-          </div>
-          <div class="design-button-small">
-            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-          </div>
-        </div>
-        <div class="design-container">
-          <div class="design-button-large">
-            <a href="https://www.freepik.com/" target="_blank">FreePik</a>
-          </div>
-        </div>
-        <div class="design-container">
-          <div class="design-button-small">
-            <a href="https://coolors.co/palettes/trending" target="_blank"
+          <div class="design-button-section" id="colors-and-fonts">
+            <h3 class="design-header">Colors and Fonts</h3>
+            <a
+              href="https://fonts.google.com"
+              target="_blank"
+              class="design-button"
+              >Google Fonts</a
+            >
+            <a
+              href="https://www.dafont.com/"
+              target="_blank"
+              class="design-button"
+              >Dafont</a
+            >
+            <a
+              href="https://www.creativefabrica.com/freebies/free-fonts/"
+              target="_blank"
+              class="design-button"
+              >Creative Fabrica</a
+            >
+            <a href="https://coolors.co/" target="_blank" class="design-button"
               >Coolers</a
             >
-          </div>
-          <div class="design-button-small">
             <a
-              href="https://imagecolorpicker.com/color-code/721a85"
+              href="https://colorhunt.co/"
               target="_blank"
-              >Color Picker</a
+              class="design-button"
+              >Color Hunt</a
+            >
+            <a
+              href="https://imagecolorpicker.com/en/"
+              target="_blank"
+              class="design-button"
+              >Image Color Picker</a
+            >
+          </div>
+          <div class="design-button-section" id="icons-and-images">
+            <h3>Icons and Images</h3>
+            <a href="https://icons8.com/" target="_blank" class="design-button"
+              >Free Icons</a
+            >
+            <a
+              href="https://unsplash.com/"
+              target="_blank"
+              class="design-button"
+              >Unsplash</a
+            >
+            <a
+              href="https://www.freepik.com/"
+              target="_blank"
+              class="design-button"
+              >Freepik</a
+            >
+            <a
+              href="https://fontawesome.com/"
+              target="_blank"
+              class="design-button"
+              >Font Awesome</a
+            >
+          </div>
+          <div class="design-button-section" id="validators">
+            <h3>Code Validators</h3>
+            <a
+              href="https://validator.w3.org/"
+              target="_blank"
+              class="design-button"
+              >W<sup>3</sup> Validator Service</a
+            >
+            <a
+              href="https://codebeautify.org/cssvalidate"
+              target="_blank"
+              class="design-button"
+              >Code Beautify</a
+            >
+            <a href="https://caniuse.com/" target="_blank" class="design-button"
+              >Can I Use?</a
             >
           </div>
         </div>
+        <!-- <div class="design-container">
+            <div class="design-button-small">
+              <a href="https://fonts.google.com/" target="_blank"
+                >Google Fonts</a
+              >
+            </div>
+            <div class="design-button-small">
+              <a href="https://fontawesome.com/" target="_blank"
+                >Font Awesome</a
+              >
+            </div>
+          </div>
+          <div class="design-container">
+            <div class="design-button-large">
+              <a href="https://www.freepik.com/" target="_blank">FreePik</a>
+            </div>
+          </div>
+          <div class="design-container">
+            <div class="design-button-small">
+              <a href="https://coolors.co/palettes/trending" target="_blank"
+                >Coolers</a
+              >
+            </div>
+            <div class="design-button-small">
+              <a
+                href="https://imagecolorpicker.com/color-code/721a85"
+                target="_blank"
+                >Color Picker</a
+              >
+            </div>
+          </div> -->
       </section>
-      <section id="section4" data-nav="Section 4" class>
+
+      <section
+        id="section4"
+        data-nav="Projects"
+        data-section="section4"
+        class="division"
+      >
         <h2>Other Projects by Ari</h2>
         <div id="project-card-container">
           <div class="project-card">
+            <img
+              src="images/monster-trading-card.png"
+              alt="Noonwraighth Monster Trading Card"
+              class="project-img"
+            />
             <a
               href="https://github.com/AriannaCF/TheWitcher3-MonsterTradingCards"
               target="_blank"
@@ -140,6 +338,12 @@
             >
           </div>
           <div class="project-card">
+            <img
+              src="images/aspi-ari-screenshot.png"
+              alt="Aspirational Ari Home Page"
+              class="project-img"
+            />
+
             <a
               href="https://ariannacf.github.io/Aspirational-Ari/"
               target="_blank"
@@ -147,6 +351,12 @@
             >
           </div>
           <div class="project-card">
+            <img
+              src="images/pixel-art-project.png"
+              alt="Pixel Art Project screenshot"
+              class="project-img"
+            />
+
             <a
               href="https://github.com/AriannaCF/pixelArtProject-repo"
               target="_blank"
@@ -158,5 +368,6 @@
     </main>
     <!-- TO DO: add footer section -->
     <footer></footer>
+    <script src="js/app.js"></script>
   </body>
 </html>
