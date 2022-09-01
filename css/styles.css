@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/* GENERAL LAYOUT AND SIZING */
+/* -------GENERAL LAYOUT AND SIZING------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 #navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 10vh;
     margin: 0;
 }
@@ -17,6 +19,9 @@
     margin: 0 5px;
     text-align: center;
 }
+#navbar a {
+    padding: 20px;
+}
 #hero-container {
     background-image: url(../images/hero-image-lpp.jpg);
     background-size: 100%;
@@ -24,13 +29,24 @@
     height: 60vh;
     margin: 0;
 }
+#primary-navigation {
+    justify-content: flex-end;
+}
+#hamburger-menu {
+    display: none;
+    width: 50px;
+    height: auto;
+    margin: 10px 0 10px 90vw;
+    cursor: pointer;
+}
 h1 {
     text-align: center;
     margin: 0;
     padding: 1em 0;
     font-size: 10vw;
-    text-shadow: 0 0 4px #a09ca6;
-}
+    color: white;
+    text-shadow: 0 0 10px #ffffff;
+ }
 h2 {
     height: 10vh;
     margin: 0 10vw;
@@ -44,7 +60,8 @@ h3 {
 #section2,
 #section3,
 #section4 {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 #explainer {
     font-size: 1.25rem;
@@ -99,15 +116,15 @@ h3 {
     margin: 10px;
 }
 .course-icon {
-    height: 100%;
-    width: 4rem;
+    width: 5vw;
+    height: auto;
 }
 .course-icon-center {
     height: 100%;
     width: 100%;
 }
 .course-title {
-    min-height: 4rem;
+    min-height: 3rem;
     font-size: 1.5rem;
     padding-left: 2.5vw;
     line-height: 4rem;
@@ -125,23 +142,24 @@ h3 {
 .design-container {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: auto;
 }
 
 .design-button-section {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 auto;
     flex-direction: column;
     margin: 10px;
+    height: auto;
 }
 
 .design-button-section a {
     margin: 10px 5px;
-    flex-basis: 9vh;
+    flex: 0 1 auto;
     border-radius: .25rem;
 }
 
 #colors-and-fonts {
-    /* background-color: #f72585; */
     background-color: #91127e60;
 }
 #icons-and-images { 
@@ -169,43 +187,15 @@ h3 {
     text-align: center;
     padding: 25px;
     font-size: 1.25rem;
-    transition: transform .2s, box-shadow .2s;
+    transition: all .2s ease;
 }
 #colors-and-fonts a:hover, 
 #icons-and-images a:hover,
 #validators a:hover {
     transform: translate(0, -4px);
     box-shadow: 0 4px 8px #00000060;
+    color: white;
 }
-/*
-.design-button-small {
-    border: 1px dotted white;
-    width: 100%;
-    height: 50%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-.design-button-large {
-    border: 1px dotted white;
-    width: 100%;
-    height: 100%;
-}
-.design-button-small a, 
-.design-button-large a {
-    text-align: center;
-    margin: 50% 0;
-    display: block;
-    margin: auto;
-    font-size: 1.5rem;
-}
-.design-button-small a {
-    padding: 40% 0;
-}
-.design-button-large a {
-    padding: 80% 0;
-}
-
-*/
 
 #project-card-container {
     height: 90vh;
@@ -217,15 +207,22 @@ li {
 .header-border {
     border-top : 2px ;
 }
+
+#other-project-heading {
+    margin-bottom: 40px;
+}
 #project-card-container {
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 10vw;
+    justify-content: space-between;
+    align-items: center;
 }
 .project-card {
     height: 80%;
-    justify-content: space-between;
-    flex-grow: 1;
-    width: 33%;  
+    flex-basis: 460px;
+    flex: 0 1 auto;
+    width: auto;  
 }
 .project-card a {
     display: block;
@@ -240,15 +237,30 @@ li {
     border: 1px solid #a09ca6;
     border-radius: .5rem;
 }
+.project-icon {
+    width: 25vw;
+    height: auto;
+}
+#project-card-container-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 50vh;
+    padding-top: 10vh;
+}
+#project-card-container-mobile a {
+    width: 20vw;
+    text-align: center;
+}
+.project-card-mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
+}
 
-
-
-
-
-
-
-
-/* FONTS AND COLORS */
+/* -------FONTS AND COLORS------- */
 
 html {
     background-color: black;
@@ -260,10 +272,24 @@ body {
 a { 
     text-decoration: none;
     color: #a09ca6;
+    transition: color .2s ease;
+}
+a:hover {
+    color: white;
+}
+#navbar a {
+    text-decoration: none;
+    transition: color .2s ease-in;
+}
+#navbar a:hover {
+    color: white;
+    text-shadow: 0 0 4px white;
 }
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
-
+}
+#explainer {
+    color: white;
 }
 #opening-section {
     background: linear-gradient(black, #23003d 90%)
@@ -285,22 +311,91 @@ h1, h2, h3 {
 #jsbin {
     font-size: 1.5rem;
 }
-/* #github {
-    border: 10px ridge #4361ee;
-    background-color:#141d4760;
-}
-#codepen {
-    border: 10px ridge #7209b7;
-    background-color: #22033760;
-}
-#jsbin {
-    border: 10px ridge #ad1a5d;
-    background-color: #4a0b2860;
-} */
-
 .design-button-small,
 .design-button-large {
     background: linear-gradient(#7a0058, #953379,#7a0058);
     border: 1px solid #55003e;
     border-radius: .5rem;
+}
+
+.subdivision {
+    transition: 2s all ease;
+    opacity: 0;
+}
+.subdivision.active {
+    opacity: 1;
+    color: white;
+}
+/* -------MEDIA QUERIES------- */
+
+@media (max-width: 992px) {
+    #project-card-container {
+        display: none;
+        }
+    .project-icon {
+        width: 10vw;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .project-icon {
+        width: 15vw;
+        height: auto;
+    }
+
+}
+@media (max-width:600px) {
+    #navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 19vh;
+        background-color: #000000;
+        opacity: .75;
+    }
+    #navbar li {
+        /* border: 1px solid white; */
+        height: 25%;
+    }
+    #navbar a {
+        color: white;
+    }
+    #hero-container {
+        height: 40vh;
+    }
+    #explainer {
+        height: 60vh;
+        font-size: 18px;
+    }
+    #hamburger-menu {
+        display: block;
+        border: 1px ;
+    }
+    .course-title {
+        font-size: 1rem;
+    }
+    #education-link-group-2{
+        flex-direction: column;
+    }
+    .resource-container {
+        margin-top: 10vh;
+    }
+}
+@media (max-width: 500px) {
+    
+    #education-link-group-1 {
+        margin-top: 5vh ;
+    }
+    .course-title {
+        min-height: 2rem;
+        line-height: 2rem;
+    }
+}
+@media (min-width: 992px) {
+    #project-card-container-mobile {
+        display: none;
+    }
 }

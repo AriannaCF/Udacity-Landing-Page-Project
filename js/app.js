@@ -22,8 +22,20 @@
  * Define Global Variables
  * 
 */
+
+//navbar variables
 const navbar = document.querySelector('#navbar');
+const menu = document.querySelector('#hamburger-menu');
 const sections = document.querySelectorAll('.division');
+const resourcesSection = document.querySelector('#section1');
+const educationSection = document.querySelector('#section2');
+const designSection = document.querySelector('#section3');
+const projectSection = document.querySelector('#section4');
+
+//viewport variables
+const viewportHeight = document.documentElement.clientHeight;
+const subsections = document.querySelectorAll('.subdivision');
+
 
 /**
  * End Global Variables
@@ -31,16 +43,35 @@ const sections = document.querySelectorAll('.division');
  * 
 */
 
+function highlighter() {
+    //loop through subsections
+    for (subsection of subsections) {
+        //find subsection position
+        const top = subsection.getBoundingClientRect().top;
+        const bottom = subsection.getBoundingClientRect().bottom;
+        //if subsection is in viewport, add class, remove once subsection is out of viewport
+        if (top<viewportHeight && bottom>0) {
+            subsection.classList.add('active');
+        } else {
+            subsection.classList.remove('active');
+        }
+    }
+}
+
+function navBarFunctionality () {
+    //toggle navbar display on small screens
+    if (navbar.style.display==="none") {
+        navbar.style.display="block";
+    } else {
+        navbar.style.display="none";
+    }
+}
+
+document.addEventListener ('scroll', highlighter);
+menu.addEventListener('click', navBarFunctionality)
 
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
+// Build menu 
 for (section of sections) {
     const navItem = document.createElement('li');
     navbar.append(navItem);
@@ -49,25 +80,3 @@ for (section of sections) {
     anchor.innerText=section.dataset.nav;
     navItem.append(anchor);
 }
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
