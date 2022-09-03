@@ -15,7 +15,6 @@
     align-items: center;
     height: 5vh;
     width: 100%;
-    background-color: #00000099;
 }
 
 #navbar li {
@@ -53,8 +52,6 @@ h1 {
     margin: 0;
     padding: 1em 0;
     font-size: 10vw;
-    color: white;
-    text-shadow: 0 0 10px #ffffff;
  }
 
 h2 {
@@ -186,50 +183,6 @@ h3 {
     border-radius: .25rem;
 }
 
-#colors-and-fonts {
-    background-color: #91127e60;
-}
-
-#icons-and-images { 
-    background-color: #5b079260;
-}
-
-#validators {
-    background-color: #364ebe60;
-}
-
-#colors-and-fonts a{
-    border: 1px solid #7f106f;
-    background: linear-gradient(#b5179e,#cb5dbb,#b5179e);
-}
-
-#icons-and-images a{
-    border: #500680;
-    background: linear-gradient(#7209b7, #9c53cd, #72097b);
-}
-
-#validators a{
-    border: #2f44a7;
-    background: linear-gradient(#4361ee, #7b90f3, #4361ee);
-}
-
-#colors-and-fonts a, 
-#icons-and-images a,
-#validators a {
-    text-align: center;
-    padding: 25px;
-    font-size: 1.25rem;
-    transition: all .2s ease;
-}
-
-#colors-and-fonts a:hover, 
-#icons-and-images a:hover,
-#validators a:hover {
-    transform: translate(0, -4px);
-    box-shadow: 0 4px 8px #00000060;
-    color: white;
-}
-
 #project-card-container {
     height: 90vh;
 }
@@ -313,6 +266,11 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+h1 {
+    color: white;
+    text-shadow: 0 0 10px #ffffff;
+}
+
 a { 
     text-decoration: none;
     color: #a09ca6;
@@ -321,6 +279,10 @@ a {
 
 a:hover {
     color: white;
+}
+
+#navbar {
+    background-color: #00000099;
 }
 
 #navbar a {
@@ -364,6 +326,50 @@ h1, h2, h3 {
 
 #section4 {
     background: linear-gradient(#3d002c, #3d0023)
+}
+
+#colors-and-fonts {
+    background-color: #91127e60;
+}
+
+#icons-and-images { 
+    background-color: #5b079260;
+}
+
+#validators {
+    background-color: #364ebe60;
+}
+
+#colors-and-fonts a{
+    border: 1px solid #7f106f;
+    background: linear-gradient(#b5179e,#cb5dbb,#b5179e);
+}
+
+#icons-and-images a{
+    border: #500680;
+    background: linear-gradient(#7209b7, #9c53cd, #72097b);
+}
+
+#validators a{
+    border: #2f44a7;
+    background: linear-gradient(#4361ee, #7b90f3, #4361ee);
+}
+
+#colors-and-fonts a, 
+#icons-and-images a,
+#validators a {
+    text-align: center;
+    padding: 25px;
+    font-size: 1.25rem;
+    transition: all .2s ease;
+}
+
+#colors-and-fonts a:hover, 
+#icons-and-images a:hover,
+#validators a:hover {
+    transform: translate(0, -4px);
+    box-shadow: 0 4px 8px #00000060;
+    color: white;
 }
 
 #github,
