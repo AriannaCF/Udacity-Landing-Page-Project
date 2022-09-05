@@ -56,12 +56,14 @@ function navBarFunctionality () {
     }
 }
 
+//Add event listeners
+
 document.addEventListener ('scroll', highlighter);
 menu.addEventListener('click', navBarFunctionality);
 
 
 
-// Build menu \
+// Build menu
 
 sections.forEach(section => {
     const navItem = document.createElement('li');
