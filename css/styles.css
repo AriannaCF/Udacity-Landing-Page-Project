@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 #navbar {
@@ -26,6 +25,7 @@
 #navbar a {
     padding: 20px;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 #hero-container {
@@ -45,6 +45,22 @@
     height: auto;
     margin: 10px 0 10px 90vw;
     cursor: pointer;
+}
+#up-chevron {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    transition: all .25s ease;
+}
+.shown {
+    opacity: 1;
+}
+.hidden {
+    opacity: 0;
 }
 
 h1 {
